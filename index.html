@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <header>
+            <nav> 
+                <div><img src="pic.jpg" alt="Round image" class="logo"></div>
+                <ul>
+                    <li><b><a href="#Home">Home</a></b></li>
+                    <li><b><a href="#About">About</a></b></li>
+                    <li><b><a href="#Skills">Skills</a></b></li>
+                    <li><b><a href="#Qualification">Qualification</a></b></li>
+                    <li><b><a href="#Contact">ContactMe</a></b></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="Home">
+            <div><img src="pic.jpg" alt="Round image" class="round-image"></div>      
+            <br><br><br><br><h2>Hi, I'm <span class="blueColor">Salwa Ali Akbar</span></h2><br>  
+            <h1>A Passionate <span class="blueColor">Web Designer</span> & <span class="blueColor"> a versatile programmer</span></h1><br>
+            <p><b>With a flair for crafting visually stunning and user-centric web designs,<br>
+                 I bring your digital vision to life.Let’s create something amazing together!</b></p>
+            <button onclick="downloadCV()" class="button">Download CV</button>
+            </section>
+            
+            <section id="About">
+            <hr class="divider">
+            <div class="about"><h1 class="heading">About <span class="blueColor">Me</span></h1><br><br>
+            <p>My journey into the world of technology has been driven by an insatiable curiosity and a desire to create.
+                I have honed my skills in Java, C++, Data Structures, HTML, CSS, DBMS, Assembly Language, and JavaScript,
+                allowing me to build robust applications and design visually stunning, user-centric web experiences. 
+                My expertise spans from crafting efficient algorithms to developing scalable software solutions, always 
+                with a focus on bringing digital visions to life. Let's create something amazing together!</p></div>
+            </section>
+
+            <section id="Skills">
+            <hr class="divider">
+            <div><h1 class="heading">My <span class="blueColor">Skills</span></h1>
+                <div class="skillsContainer">
+                    <div class="subBlock sameBlock"><h2>C++ & Java</h2><br>
+                        <h3>Proficient in C++ and Java, leveraging
+                            object-oriented programming and
+                            robust platforms for building scalable,
+                            high-performance applications.
+                        </h3></div>
+                    <div class="subBlock sameBlock"><h2>Data Structure</h2><br>
+                        <h3>Skilled in data structures, 
+                            enabling optimized storage,access,
+                            and manipulation of data to 
+                            solve complex computational problems
+                        </h3></div>   
+                    <div class="subBlock sameBlock"><h2>DBMS</h2><br>
+                        <h3>Adept in Database Management 
+                            Systems, ensuring efficient
+                            data organization, retrieval,
+                            and management using SQL and
+                            NoSQL databases
+                        </h3></div> 
+                        <div class="subBlock sameBlock"><h2>HTML & CSS</h2><br>
+                            <h3>Expert in HTML and CSS, crafting clean,
+                                semantic, and visually appealing
+                                web designs that are responsive
+                                and user-friendly.
+                            </h3></div>
+                    <div class="subBlock sameBlock"><h2>JavaScript</h2><br>
+                        <h3>Knowledgeable in JavaScript,
+                            enhancing web interactivity and
+                            functionality through dynamic 
+                            scripting and modern frameworks
+                        </h3></div> 
+                    <div class="subBlock sameBlock"><h2>Passion for Learning</h2><br>
+                        <h3>Passionate about continuously 
+                            learning and expanding my skills
+                            in web development and Flutter 
+                            to build versatile and modern
+                            applications
+                        </h3></div>    
+                </div>   
+            </div>
+            </section>
+            
+            <section id="Qualification">
+            <hr class="divider">   
+            <div><h1 class="heading">Educational <span class="blueColor">Background</span></h1>
+                <div class="subBlock"><h2>BS Computer Science</h2><br><br>
+                <h3>* Sukkur IBA University<br><br>
+                    * 3.85 CGPA<br><br>
+                    * 2022-Present
+                </h3></div>
+
+                <div class="subBlock"><h2>FSc - PreMedical</h2><br><br>
+                    <h3>* Govt.Girls Degree College<br><br>
+                        * A Grade<br><br>
+                        * 2018-2020
+                    </h3></div>
+
+                    <div class="subBlock"><h2>Matriculation</h2><br><br>
+                        <h3>* Arqam Public High School<br><br>
+                            * B Grade<br><br>
+                            * 2016-2018
+                        </h3></div>
+
+            </div>
+            </section>
+            <section id="Contact">
+                <hr class="divider">  
+                <div class="contact"><h1 class="heading">Contact <span class="blueColor">Me</span></h1><br>
+                    <input type="text" id="first" name="First Name" placeholder="First Name"> <br>
+                    <input type="text" id="last" name="Last Name" placeholder="Last Name">  <br>
+                    <input type="text" id="father" name="Father Name" placeholder="Father Name"> <br> 
+                    <input type="text" id="phone" name="Phone" placeholder="Phone">  <br>
+                    <input type="text" id="cnic"name="CNIC" placeholder="Cnic">  <br>
+                    <textarea name="message" id="msg" placeholder="Enter your message"></textarea> <br>
+                    <button class="stylebtn" onclick="checkfornull()">Send Message</button><br><br>
+                    
+            </section>
+                  
+        </main>  
+        <script >
+            const checkfornull=()=>{
+                var f = document.getElementById("first").value.trim();
+                 var l = document.getElementById("last").value.trim();
+                 var fa = document.getElementById("father").value.trim();
+                 var p = document.getElementById("phone").value.trim();
+                 var c = document.getElementById("cnic").value.trim();
+                var m = document.getElementById("msg").value.trim();
+                if (f === '' || l === '' || fa === '' || p === '' || c === '' || m === '') {
+                     alert("Please fill in all fields.");
+                 }
+                 else{
+                    window.location.href = "mailto:salwaaliakbar22@gmail.com";                
+                 }
+            }
+        </script>
+        
+        <footer>
+
+             <div class="justifyBetween">
+            <div class="block"><img src="pic.jpg" alt="Round image" class="footerImage"><br><br>
+            <img src="phone.png" alt="Round image" class="phone">+92 3337126809<br><br><br>
+            <img src="email.png" alt="Round image" class="phone">salwaaliakbar22@gmail.com</div>
+            
+            <div class="block left">  Contact me<br><br>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/salwa-ali-akbar-b55404240/" target="_blank">
+                        <img src="linkelin.png" alt="LinkedIn" class="phone">
+                    </a>
+                        <img src="fb.png" alt="Facebook" class="phone">
+                    </a>
+                        <img src="twitter.png" alt="Twitter" class="phone">
+                    </a>
+                </div>
+        </div></footer>  
+       
+    </div>
+    <script>
+        function downloadCV() {
+            var link=document.createElement('a');
+            link.href="CV.docx";
+            link.download="CV.docx";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
